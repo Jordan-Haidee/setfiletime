@@ -12,3 +12,9 @@ walkdir = "2.5.0"
 [[bin]]
 name = "sft"
 path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
